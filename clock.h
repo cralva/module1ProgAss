@@ -4,8 +4,10 @@
 
 class clockType {
 public:
-    void setTime(int, int, int);
-    void getTime(int&, int&, int&) const;
+    clockType(); //default constructor
+    clockType(int, int = 0, int = 0); 
+    void setTime(int h, int m, int s);
+    void getTime(int &h, int &m, int &s) const;
     void printTime() const;
     void incrementSeconds();
     void incrementMinutes();

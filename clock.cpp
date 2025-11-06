@@ -34,3 +34,14 @@ void clockType::getTime(int &h, int &m, int &s) const { //const outside of the p
     s = sec;
 
 }
+
+clockType::clockType() { //first ct is for the class and after the colon its for teh constructor
+    hr = 0;
+    min = 0;
+    sec = 0;
+}
+
+clockType::clockType(int hour, int minute, int second)
+{
+    setTime(hour, minute, second);
+}
