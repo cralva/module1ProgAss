@@ -25,3 +25,12 @@ void clockType::setTime(int h, int m, int s) { //we use clockType:: because that
 // void setTime(int, int, int) {
 
 // } this isnt related to the class but can exist together, thats bc this cant change any of the int parameters but when its connected to a class then it can
+
+
+void clockType::getTime(int &h, int &m, int &s) const { //const outside of the parentheses says that we are unallowed to change clock//with setTime() we dont have a const so we can change the clock, set the hours minutes and seconds. getTime() is const so we cant set those, we can just look at them
+    // hr = h; this will be an error because lvalue "hr" cannot be changed since this is a const
+    h = hr;
+    m = min;
+    s = sec;
+
+}

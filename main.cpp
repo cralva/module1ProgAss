@@ -4,6 +4,12 @@
 int main() {
     clockType c; //making objects these are their own object
     c.setTime(5, 43, 22);
+    //int hour, minute, second //typically don't declare multiple variables in one line and eclare a value
+    int hour = 0;
+    int minute = 0;
+    int second = 0;
+
+    c.getTime(hour, minute, second); //we need to have values in the arugments
 
     clockType yourClock; //another object called yourClock. whatever we use as the arguments wont affect the other object c
     
