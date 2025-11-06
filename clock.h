@@ -6,7 +6,7 @@ public:
     void incrementSeconds();
     void incrementMinutes();
     void incrementHours();
-    bool equalTimes(const clockType&) const; 
+    bool equalTime(const clockType&) const; //const is everywhere in this function. we can put const in different places and it plays a different role depending on where it is
 
 private:
     int hr;
