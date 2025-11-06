@@ -1,3 +1,7 @@
+//#pragma once //this is not recommended bc sometimes it will get flagged
+#ifndef CLOCK_H //telling the preprocessor to write this down
+#define CLOCK_H //and to do this if its not defined yet
+
 class clockType {
 public:
     void setTime(int, int, int);
@@ -13,3 +17,7 @@ private:
     int min;
     int sec;
 };
+
+#endif //we started the block with #ifndef and are ending it with #endif. and everything in the if block then it will be protected
+
+//basically this is just an if statement that checks to see if the compiler has analyzed this file. if it has then it will skip it, if it has not then it will analyze it
