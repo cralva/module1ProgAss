@@ -2,6 +2,12 @@
 #ifndef CLOCK_H //telling the preprocessor to write this down
 #define CLOCK_H //and to do this if its not defined yet
 
+//turning this into a 24 hour clock using enumerations
+enum timeType
+{
+    
+};
+
 class clockType {
 public:
     clockType(); //default constructor

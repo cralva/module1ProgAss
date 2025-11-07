@@ -45,3 +45,9 @@ clockType::clockType(int hour, int minute, int second)
 {
     setTime(hour, minute, second);
 }
+
+
+ bool clockType::equalTime(const clockType & otherClock) const
+ {
+    return hr == otherClock.hr && min == otherClock.min && sec == otherClock.sec;
+ }
