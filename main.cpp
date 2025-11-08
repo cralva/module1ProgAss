@@ -16,7 +16,7 @@ int main() {
 
     //we sandwich line 18 and 19 in curly bracelets and now its a scope
     clockType c; //making objects these are their own object
-    c.setTime(5, 43, 22);
+    c.setTime(5, 43, 22, TWELVE, partType::AM);
     
     //int hour, minute, second //typically don't declare multiple variables in one line and eclare a value
     int hour = 0; //these cant be const int
@@ -33,6 +33,7 @@ int main() {
     for (int i = 0; i < 100; i++)
     {
         clockType a = createClock();
+        std::cout << a.printTime() << std::endl;
     }
     // std::cout << a.printTime() << std::endl; this wont be work because 'a' is locked into the curly braces of our for loop line 34
 
@@ -45,11 +46,27 @@ clockType createClock()
     int hour;
     int minute;
     int second;
+    int format;
+    format = rand() % 2;
+    partType tod = partType::PM;
+    if(!format)
+    {
+        hour = (rand() % 12) + 1; 
+        int time = rand() % 2;
+        tod = parts[time];
 
-    hour = rand() % 24;
+
+
+    }
+    else {
+        hour = rand() % 24;   
+    }
+
     minute = rand() % 60;
     second = rand() % 60;
-    clockType newClock(hour, minute, second);
+
+   
+    clockType newClock(hour, minute, second, formats[format], tod);
     noClocks++;
     std::cout << noClocks << " clocks created in the program." << std::endl;
 
